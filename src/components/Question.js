@@ -3,8 +3,6 @@ import { connect } from 'react-redux'
 
 class Question extends Component {
 	render() {
-		if (this.props.content.questions)
-			console.log(`../assets/${this.props.content.questions[this.props.content.currentQuestion].image}`)
 		return (
 			<div className="content">
 				{
@@ -14,7 +12,7 @@ class Question extends Component {
 						<div className="imgHolder">
 							{
 								this.props.content.questions[this.props.content.currentQuestion].image &&
-								<img src={window.location.origin + '/assets/' + this.props.content.questions[this.props.content.currentQuestion].image} alt="" />
+								<img src={this.props.content.questions[this.props.content.currentQuestion].image} alt="" />
 							}
 						</div>
 						<h4>Question {this.props.content.questions[this.props.content.currentQuestion].content} </h4>

@@ -19,19 +19,15 @@ class Timer extends Component {
 
 	render() {
 		return (
-			<div className="countdown">
-				{!this.props.content.done && (
-					<React.Fragment>
-						<Countdown
-							onTick={() =>
-								this.setState({ timeToGo: this.state.timeToGo - 1000 })
-							}
-							date={Date.now() + this.state.timeToGo}
-							onComplete={() => this.props.timeIsUp(this.props.content)}
-							renderer={this.renderCountdown}
-						/>
-					</React.Fragment>
-				)}
+			<div className="timer">
+				<Countdown
+					onTick={() =>
+						this.setState({ timeToGo: this.state.timeToGo - 1000 })
+					}
+					date={Date.now() + this.state.timeToGo}
+					onComplete={() => this.props.timeIsUp(this.props.content)}
+					renderer={this.renderCountdown}
+				/>
 			</div>
 		)
 	}

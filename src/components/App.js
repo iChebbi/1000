@@ -8,13 +8,13 @@ import Choices from './Choices'
 import Navigation from './Navigation'
 import Result from './Results'
 import Timer from './Timer'
-import data from '../assets/data.json'
+import data from '../data.json'
 
 import './style.css'
 
 class App extends Component {
 	componentDidMount = () => {
-		this.props.changeContent(data.examples)
+		this.props.changeContent(data.questions)
 	}
 
 	render() {

@@ -14,7 +14,7 @@ class Choices extends Component {
 						return (
 							<div
 								key={i}
-								className={choice.isSelected ? 'active choice' : 'choice'}
+								className={choice.isSelected ? 'active btn' : 'btn'}
 								onClick={() => this.props.selectAnswer(this.props.content, i)}
 							>
 								{choice.content}

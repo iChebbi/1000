@@ -5,10 +5,22 @@
 	align-items: center;
 }
 
-.countdown {
-	color: red;
+
+.content {
+	align-items: center;
+	border-bottom: solid 1px gray;
+	border-top: solid 1px gray;
 	display: flex;
-	font-size: 20px
+	flex-direction: column;
+	justify-content: space-around;
+	margin : 10px;
+	text-align: center;
+	width: 100%;
+}
+
+.timer {
+	color: red;
+	font-size: 1.5em;
 }
 
 .choices {
@@ -16,39 +28,44 @@
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
+	width: 90vw;
 }
 
-.choice {
+.btn {
 	border: solid 1px slategrey;
 	border-radius: 10px;
 	cursor: pointer;
-	font-size: 30px;
-  line-height: 75px;
-	max-height: 150px;
-	margin: 10px;
-  text-align: center;
+	font-size: 1em;
+	line-height: 40px;
+	margin: 5px;
+	text-align: center;
 	width: 100px;
+	padding: 10px;
 }
 
-.choice.active {
+.btn.active {
 	background-color: slategrey;
 	color : white;
 }
 
-.question {
-	align-items: center;
-	border-top: solid 1px gray;
-	border-bottom: solid 1px gray;
+.imgHolder {
+	height: 30vh;
+}
+
+img {
+	max-width:100%;
+	max-height: 100%;
+}
+
+.navigation {
 	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	height: 400px;
-	margin : 20px;
-	width: 100%;
-	text-align: center;
-	
+	flex-direction: row;
 }
 
 .question-content {
 	width: calc(100% - 100px);
+}
+
+.warning {
+	color: tomato
 }

@@ -5,13 +5,13 @@ import { nextQuestion, previousQuestion } from '../actions/contentActions'
 class Choices extends Component {
 	render() {
 		return (
-			<div>
+			<div className="navigation">
 				{
 					!this.props.content.done &&
 					(
 						<React.Fragment>
-							<span onClick={() => this.props.previousQuestion(this.props.content)} style={{ margin: 5 }}>Back</span>
-							<span onClick={() => this.props.nextQuestion(this.props.content)} style={{ margin: 5 }}>Next</span>
+							<div className="btn" onClick={() => this.props.previousQuestion(this.props.content)} style={{ margin: 5 }}>Back</div>
+							<div className="btn" onClick={() => this.props.nextQuestion(this.props.content)} style={{ margin: 5 }}>Next</div>
 						</React.Fragment>
 					)
 				}

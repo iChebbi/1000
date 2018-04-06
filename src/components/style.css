@@ -1,0 +1,54 @@
+.app {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.countdown {
+	color: red;
+	display: flex;
+	font-size: 20px
+}
+
+.choices {
+	flex-direction: row;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.choice {
+	border: solid 1px slategrey;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 30px;
+  line-height: 75px;
+	max-height: 150px;
+	margin: 10px;
+  text-align: center;
+	width: 100px;
+}
+
+.choice.active {
+	background-color: slategrey;
+	color : white;
+}
+
+.question {
+	align-items: center;
+	border-top: solid 1px gray;
+	border-bottom: solid 1px gray;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 400px;
+	margin : 20px;
+	width: 100%;
+	text-align: center;
+	
+}
+
+.question-content {
+	width: calc(100% - 100px);
+}

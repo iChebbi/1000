@@ -3,27 +3,22 @@ import { connect } from 'react-redux'
 
 import { changeContent } from '../actions/contentActions'
 
-
-import PreTest from './PreTest'
-import Test from './Test'
-import Navigation from './Navigation'
+import Question from './Question'
+import Choices from './Choices'
+import data from '../data.json'
 
 import './style.css'
 
-class App extends Component {
+class PreTest extends Component {
+	componentDidMount = () => {
+		this.props.changeContent(data.examples)
+	}
 
 	render() {
 		return (
 			<div className="app">
-				{
-					this.props.content && this.props.content.example &&
-					<PreTest />
-				}
-				{
-					this.props.content && !this.props.content.example &&
-					<Test />
-				}
-				<Navigation />
+				<Question />
+				<Choices />
 			</div>
 		)
 	}
@@ -41,4 +36,4 @@ const mapDispatchToProps = dispatch => {
 	}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default connect(mapStateToProps, mapDispatchToProps)(PreTest)

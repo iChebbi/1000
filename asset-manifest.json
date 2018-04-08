@@ -1,6 +1,11 @@
 {
-  "main.css": "static/css/main.90155d7e.css",
-  "main.css.map": "static/css/main.90155d7e.css.map",
-  "main.js": "static/js/main.f542f7ac.js",
-  "main.js.map": "static/js/main.f542f7ac.js.map"
+  "main.css": "static/css/main.d839412b.css",
+  "main.css.map": "static/css/main.d839412b.css.map",
+  "main.js": "static/js/main.0ae84c99.js",
+  "main.js.map": "static/js/main.0ae84c99.js.map",
+  "static/media/BG.png": "static/media/BG.9c949b59.png",
+  "static/media/ZonaPro-Bold.otf": "static/media/ZonaPro-Bold.6c7b5fc6.otf",
+  "static/media/ZonaPro-Thin.otf": "static/media/ZonaPro-Thin.ea88a6c0.otf",
+  "static/media/info-circle.svg": "static/media/info-circle.e17ec332.svg",
+  "static/media/logoGMC.svg": "static/media/logoGMC.5cee39ca.svg"
 }

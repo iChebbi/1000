@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { nextQuestion, previousQuestion } from '../actions/contentActions'
+import { nextQuestion, previousQuestion } from '../../actions/contentActions'
 
 class Results extends Component {
 	enumurateCorrectAnswers = () => {

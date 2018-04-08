@@ -1,0 +1,77 @@
+.nav-user {
+  display: flex;
+  align-items: center;
+  margin-right: 10%;
+}
+
+.navbar {
+  background-color: #000000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  width: 100%;
+}
+
+.brand-container {
+  display: flex;
+  align-items: center;
+  margin-left: 10%;
+}
+
+.gmc-red {
+  background-color: rgb(254, 66, 77);
+}
+
+.logo {
+  height: 30px;
+}
+
+.navbar {
+  font-family: ZonaProBold;
+  font-size: 20px;
+}
+.thousand {
+  font-size: 30px;
+}
+
+.v-sep {
+  height: 30px;
+  margin: 15px;
+  border: solid 0.5px white;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-user {
+    display: none;
+  }
+  .logo {
+    height: 25px;
+  }
+  .thousand {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .nav-user {
+    font-size: 1.75em;
+  }
+  .logo {
+    height: 25px;
+  }
+  .thousand {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .nav-user {
+    display: none;
+  }
+  .logo {
+    height: 25px;
+  }
+  .thousand {
+    font-size: 25px;
+  }
+}

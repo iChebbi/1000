@@ -1,0 +1,135 @@
+.btn-red-gmc {
+  margin-left: auto;
+  background-color: rgb(254, 66, 77);
+  border: none;
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.form-element {
+  display: flex;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.form-element > input[type='text'],
+.form-element > select {
+  background-color: rgb(225, 225, 225);
+  border: none;
+  height: 22px;
+}
+
+.form-element > input[type='text'],
+select.country {
+  width: 100%;
+}
+
+.form-element > select.day,
+select.month {
+  width: 25%;
+}
+.form-element > select.year {
+  width: 50%;
+}
+.form-element > select.phone {
+  width: 20%;
+  height: 24px;
+}
+
+.form-element > input.phone {
+  width: 80%;
+}
+
+.form-element > label {
+  width: 350px;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+.form-toggle {
+  width: 100%;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-end;
+}
+
+.info-text {
+  line-height: 20px;
+}
+
+.info-circle {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+
+.profile-title {
+  color: rgb(96, 96, 96);
+  font-family: ZonaProBold;
+  font-size: 25px;
+  font-weight: 700;
+  margin: 1% 0 0 0;
+}
+
+.profile-desc {
+  font-family: ZonaProThin;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.Profile {
+  display: flex;
+  flex-direction: column;
+}
+.profile-form {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  text-align: right;
+  width: 30%;
+}
+
+.profile-form-container {
+  display: flex;
+}
+
+.toggle {
+  background-color: #e0e0e1;
+  border: none;
+  width: 49%;
+  margin: 0 1px;
+  color: #949494;
+  font-family: ZonaProThin;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.toggle-active {
+  background-color: rgba(79, 79, 79, 0.8);
+  color: white;
+  font-family: ZonaProBold;
+}
+
+@media screen and (max-width: 1024px) {
+  .profile-form {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .profile-form-container {
+    display: block;
+  }
+  .form-element > label {
+    width: 50%;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 420px) {
+}

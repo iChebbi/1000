@@ -1,0 +1,58 @@
+.Parrainez {
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  font-family: ZonaProThin;
+  font-size: 25px;
+  font-weight: 600;
+  color: rgb(254, 66, 77);
+}
+
+.tab-btn {
+  background-color: #e0e0e1;
+  border: none;
+  color: #949494;
+  font-family: ZonaProThin;
+  font-size: 25px;
+  padding: 0 15px;
+  margin-right: 3px;
+  cursor: pointer;
+}
+
+.tab-btn-active {
+  background-color: rgba(79, 79, 79, 0.8);
+  color: white;
+  font-family: ZonaProBold;
+}
+
+.tab-container {
+  display: flex;
+  width: 100%;
+  margin: 1% 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-user {
+    display: none;
+  }
+  .tab-container {
+    display: grid;
+  }
+}
+  @media screen and (max-width: 576px) {
+    .nav-user {
+      font-size: 1.75em;
+    }
+    .tab-container {
+      display: grid;
+    }
+  }
+  @media screen and (max-width: 420px) {
+    .nav-user {
+      display: none;
+    }
+    .tab-container {
+      display: grid;
+    }
+  }
+

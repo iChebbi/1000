@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { selectAnswer } from '../actions/contentActions'
+import { selectAnswer } from '../../actions/contentActions'
 
 class Choices extends Component {
 	render() {
@@ -14,7 +14,7 @@ class Choices extends Component {
 						return (
 							<div
 								key={i}
-								className={choice.isSelected ? 'active btn' : 'btn'}
+								className={choice.isSelected ? 'btn-active btn' : 'btn'}
 								onClick={() => this.props.selectAnswer(this.props.content, i)}
 							>
 								{choice.content}

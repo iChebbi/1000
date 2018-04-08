@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Countdown from 'react-countdown-now'
 
-import { timeIsUp } from '../actions/contentActions'
+import { timeIsUp } from '../../actions/contentActions'
 
 class Timer extends Component {
 	renderCountdown = ({ minutes, seconds, completed }) => {

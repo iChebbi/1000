@@ -9,12 +9,10 @@ class Question extends Component {
 					this.props.content.questions &&
 					(<React.Fragment>
 						<h3>{this.props.content.example ? 'Examples' : `Question : ${this.props.content.currentQuestion + 1} `} </h3>
-						<div className="imgHolder">
 							{
 								this.props.content.questions[this.props.content.currentQuestion].image &&
 								<img src={this.props.content.questions[this.props.content.currentQuestion].image} alt="" />
 							}
-						</div>
 						<h4>{this.props.content.questions[this.props.content.currentQuestion].content} </h4>
 					</React.Fragment>)
 				}

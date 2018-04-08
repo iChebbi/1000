@@ -1,44 +1,19 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-
-import { changeContent } from '../actions/contentActions'
-
-
-import PreTest from './PreTest'
-import Test from './Test'
-import Navigation from './Navigation'
-
+import NavBar from './NavBar/NavBar'
+import Content from './Content/Content'
+import Footer from './Footer/Footer'
 import './style.css'
 
 class App extends Component {
-
-	render() {
-		return (
-			<div className="app">
-				{
-					this.props.content && this.props.content.example &&
-					<PreTest />
-				}
-				{
-					this.props.content && !this.props.content.example &&
-					<Test />
-				}
-				<Navigation />
-			</div>
-		)
-	}
+  render() {
+    return (
+      <div className="App">
+        <NavBar />
+				<Content/>
+        <Footer />
+      </div>
+    )
+  }
 }
 
-const mapStateToProps = state => {
-	return {
-		content: state.content
-	}
-}
-
-const mapDispatchToProps = dispatch => {
-	return {
-		changeContent: content => dispatch(changeContent(content))
-	}
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default App

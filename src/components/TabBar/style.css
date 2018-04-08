@@ -22,13 +22,23 @@
 .tab-btn-active {
   background-color: rgba(79, 79, 79, 0.8);
   color: white;
-  font-family: ZonaProBold;
+	font-family: ZonaProBold;
 }
 
 .tab-container {
-  display: flex;
-  width: 100%;
+	display: flex;
+	flex-wrap: wrap;
   margin: 1% 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 1600px) {
+	.Parrainez {
+		font-size: 20px;
+	}
+  .tab-btn {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -39,20 +49,19 @@
     display: grid;
   }
 }
-  @media screen and (max-width: 576px) {
-    .nav-user {
-      font-size: 1.75em;
-    }
-    .tab-container {
-      display: grid;
-    }
+@media screen and (max-width: 576px) {
+  .nav-user {
+    font-size: 1.75em;
   }
-  @media screen and (max-width: 420px) {
-    .nav-user {
-      display: none;
-    }
-    .tab-container {
-      display: grid;
-    }
+  .tab-container {
+    display: grid;
   }
-
+}
+@media screen and (max-width: 420px) {
+  .nav-user {
+    display: none;
+  }
+  .tab-container {
+    display: grid;
+  }
+}

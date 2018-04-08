@@ -116,9 +116,9 @@ select.month {
   font-family: ZonaProBold;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1645px) {
   .profile-form {
-    width: 100%;
+    width: 60%;
   }
 }
 

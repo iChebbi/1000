@@ -6,7 +6,7 @@ class Profile extends Component {
   render() {
     return (
       <div className="Profile">
-        <p className="profile-title">dis-nous en un peu plus sur toi</p>
+        <p className="profile-title">Dis-nous en un peu plus sur toi</p>
         <p className="profile-desc">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
           rhoncus congue est ac finibus. Aenean eleifend condimentum mi nec

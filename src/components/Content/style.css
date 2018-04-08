@@ -10,3 +10,10 @@
   font-weight: 700;
   margin-bottom: 2% 0 1% 0;
 }
+
+
+@media screen and (max-width: 1280px) {
+  .Content {
+		margin : 2% 5%;
+	}
+}

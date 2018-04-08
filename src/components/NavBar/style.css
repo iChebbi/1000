@@ -41,6 +41,15 @@
   border: solid 0.5px white;
 }
 
+@media screen and (max-width: 1280px) {
+  .brand-container {
+		margin-left: 5%;
+	}
+	.nav-user {
+		margin-right: 5%;
+	}
+}
+
 @media screen and (max-width: 1024px) {
 	.brand-container {
 		margin-left: auto;

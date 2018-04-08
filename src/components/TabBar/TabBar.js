@@ -9,7 +9,7 @@ class TabBar extends Component {
         <button className="tab-btn tab-btn-active">Profil</button>
         <button className="tab-btn">Conditions</button>
         <button className="tab-btn">Skillz</button>
-        <button className="tab-btn">Check</button>
+        <button className="tab-btn">Check-in</button>
         <button className="tab-btn">1000Coders</button>
         <button className="tab-btn">Réglement</button>
         <button className="tab-btn">Administration</button>

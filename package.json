@@ -2,7 +2,7 @@
 	"name": "1000coders",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "http://ichebbi.github.io/1000",
+	"homepage": "https://ichebbi.github.io/1000Coders-Quiz-Component/",
 	"prettier": {
 		"semi": false,
 		"singleQuote": true

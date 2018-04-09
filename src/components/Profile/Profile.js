@@ -54,13 +54,13 @@ class Profile extends Component {
             </div>
             <div className="form-element">
               <label htmlFor="">Date de naissance</label>
-              <select className="day" />
-              <select className="month" />
-              <select className="year" />
+              <input className="date" type="Date" />
             </div>
             <div className="form-element">
               <label htmlFor="">Téléphone</label>
-              <select className="phone" />
+              <select className="phone" >
+								<option value="">+216</option>
+							</select>
               <input className="phone" type="text" />
             </div>
 

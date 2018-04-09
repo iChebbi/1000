@@ -13,25 +13,19 @@
   width: 100%;
 }
 
-.form-element > input[type='text'],
+.form-element > input,
 .form-element > select {
   background-color: rgb(225, 225, 225);
   border: none;
-  height: 22px;
+	height: 22px;
+	text-align: center;
 }
 
-.form-element > input[type='text'],
+.form-element > input,
 select.country {
   width: 100%;
 }
 
-.form-element > select.day,
-select.month {
-  width: 25%;
-}
-.form-element > select.year {
-  width: 50%;
-}
 .form-element > select.phone {
   width: 20%;
   height: 24px;
@@ -53,8 +47,8 @@ select.month {
 
 .info {
   width: 100%;
-	display: flex;
-	margin-top : 20px;
+  display: flex;
+  margin-top: 20px;
   justify-content: flex-end;
   align-self: flex-end;
 }

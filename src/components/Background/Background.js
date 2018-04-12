@@ -208,6 +208,7 @@ class Background extends Component {
 			case 3 : return this.renderFourthStep()
 			case 4 : return this.renderFifthStep()
 			case 5 : return this.renderSixthStep()
+			default : return this.renderFirstStep()
 		}
 	}
 

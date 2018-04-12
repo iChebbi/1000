@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { logout } from '../../actions/authActions'
+
 import gmc from '../../assets/images/logoGMC.svg'
 import './style.css'
 
@@ -11,14 +14,28 @@ class NavBar extends Component {
           <div className="v-sep" />
           <img src={gmc} className="logo" alt="GoMyCode" />
         </div>
-        <div className="nav-user">
-          <p className="gmc-red">student@mail.com</p>
-          <div className="v-sep" />
-          <p>Se déconnecter</p>
-        </div>
+        {window.localStorage.access_token && (
+          <div className="nav-user">
+            <p className="gmc-red">{window.localStorage.user_email}</p>
+            <div className="v-sep" />
+            <button onClick={() => this.props.logout()}>Se déconnecter</button>
+          </div>
+        )}
       </div>
     )
   }
 }
 
-export default NavBar
+const mapStateToProps = state => {
+  return {
+    auth: state.auth
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    logout: () => dispatch(logout())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(NavBar)

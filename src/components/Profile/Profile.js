@@ -179,7 +179,9 @@ class Coordonnees extends Component {
           </div>
 
           <div className="form-group">
-            <label className="label-right">Dernier Établissement fréquenté</label>
+            <label className="label-right">
+              Dernier Établissement fréquenté
+            </label>
             <input type="text" />
           </div>
 
@@ -203,7 +205,7 @@ class Coordonnees extends Component {
             </p>
             <div className="toggle-group">
               <button
-							onClick={() => this.setState({ conseil: false })}
+                onClick={() => this.setState({ conseil: false })}
                 className={
                   this.state.conseil === false
                     ? 'toggle toggle-active'
@@ -213,7 +215,7 @@ class Coordonnees extends Component {
                 Non
               </button>
               <button
-							onClick={() => this.setState({ conseil: true })}
+                onClick={() => this.setState({ conseil: true })}
                 className={
                   this.state.conseil === true
                     ? 'toggle toggle-active'
@@ -239,7 +241,7 @@ class Coordonnees extends Component {
               </p>
               <div className="toggle-group">
                 <button
-								onClick={() => this.setState({ membre: false })}
+                  onClick={() => this.setState({ membre: false })}
                   className={
                     this.state.membre === false
                       ? 'toggle toggle-active'
@@ -249,7 +251,7 @@ class Coordonnees extends Component {
                   Non
                 </button>
                 <button
-								onClick={() => this.setState({ membre: true })}
+                  onClick={() => this.setState({ membre: true })}
                   className={
                     this.state.membre === true
                       ? 'toggle toggle-active'
@@ -284,6 +286,8 @@ class Coordonnees extends Component {
         return this.setState({ step: 'Vie Associative' })
       case 'Vie Associative':
         return this.props.setTab('Background')
+      default:
+        return this.setState({ step: 'Coordonnées' })
     }
   }
 

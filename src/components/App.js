@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+
 import NavBar from './NavBar/NavBar'
+import Login from './Login/Login';
 import Content from './Content/Content'
 import Footer from './Footer/Footer'
+
 import './style.css'
 
 class App extends Component {
@@ -9,11 +13,19 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
-				<Content/>
+        {!window.localStorage.access_token && <Login />}
+        {window.localStorage.access_token && <Content />}
         <Footer />
       </div>
     )
   }
 }
 
-export default App
+const mapStateToProps = state => {
+  return {
+    auth: state.auth
+  }
+}
+
+
+export default connect(mapStateToProps)(App)

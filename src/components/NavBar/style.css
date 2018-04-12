@@ -31,6 +31,15 @@
   font-family: ZonaProBold;
   font-size: 20px;
 }
+
+.navbar button {
+	border: none;
+	background-color: transparent;
+	color: white;
+	cursor: pointer;
+	font-family: ZonaProBold;
+  font-size: 20px;
+}
 .thousand {
   font-size: 30px;
 }

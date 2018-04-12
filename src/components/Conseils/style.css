@@ -1,0 +1,43 @@
+.Conseils {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 22px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: rgba(224, 224, 225, 0.4);
+  padding: 2%;
+  margin: 1% 0;
+}
+
+.Conseils .btn-next {
+  border: none;
+  background-color: rgb(254, 66, 77);
+  color: white;
+  cursor: pointer;
+  font-family: ZonaProBold;
+  font-size: 20px;
+  height: 40px;
+  width: 100px;
+}
+
+.Conseils .header {
+  font-family: ZonaProBold;
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0 0;
+}
+
+.Conseils .important {
+	color: rgb(254, 66, 77);
+	font-style: italic;
+	font-weight: 500;
+	font-family: ZonaProBold;
+}
+
+.Conseils .navigation {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1%;
+}

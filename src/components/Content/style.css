@@ -1,6 +1,9 @@
 .Content {
-  flex: 1;
-  margin: 2% 10%;
+  display: flex;
+  flex-direction: column;
+  -ms-flex: 1 1;
+  flex: 1 1;
+	margin: 2% 10%;
 }
 
 .content-title {
@@ -11,9 +14,8 @@
   margin-bottom: 2% 0 1% 0;
 }
 
-
 @media screen and (max-width: 1400px) {
   .Content {
-		margin : 2% 5%;
-	}
+    margin: 2% 5%;
+  }
 }

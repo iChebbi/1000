@@ -5,7 +5,9 @@ class Footer extends Component {
   render() {
     return (
       <div className="footer">
-        <p className="copyright">Copyright &copy; GOMYCODE 2018. Tous droit reservé</p>
+        <p className="copyright">
+          Copyright &copy; GOMYCODE 2018. Tous droit reservé
+        </p>
       </div>
     )
   }

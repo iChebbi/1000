@@ -8,8 +8,8 @@ import Choices from './Choices'
 import Result from './Results'
 import Timer from './Timer'
 import data from '../../assets/data.json'
-
-// import './style.css'
+import Navigation from './Navigation'
+import Porgress from './Porgress'
 
 class Test extends Component {
   componentDidMount = () => {
@@ -21,7 +21,11 @@ class Test extends Component {
       <div className="test">
         {!this.props.content.done && (
           <React.Fragment>
-            <Timer />
+            <div className="test-header">
+              <Timer />
+							<Porgress />
+              <Navigation />
+            </div>
             <Question />
             <Choices />
           </React.Fragment>

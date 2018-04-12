@@ -12,15 +12,6 @@ class Choices extends Component {
       <div className="navigation">
         {!this.props.content.done && (
           <React.Fragment>
-            {this.props.content.example &&
-              this.props.content.currentQuestion + 1 &&
-              this.props.content.questions.length &&
-              this.props.content.currentQuestion + 1 ===
-                this.props.content.questions.length && (
-                <div className="btn btn-start" onClick={() => this.props.startTest()}>
-                  Start
-                </div>
-              )}
             {this.props.content.questions &&
               this.props.content.currentQuestion + 1 !==
                 this.props.content.questions.length && (
@@ -32,14 +23,14 @@ class Choices extends Component {
                         this.props.previousQuestion(this.props.content)
                       }
                     >
-                      Back
+                      &#60;
                     </div>
                   )}
                   <div
                     className="btn btn-nav"
                     onClick={() => this.props.nextQuestion(this.props.content)}
                   >
-                    Next
+                    &#62;
                   </div>
                 </React.Fragment>
               )}

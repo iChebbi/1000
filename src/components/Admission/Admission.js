@@ -5,7 +5,6 @@ import { changeContent } from '../../actions/contentActions'
 
 import PreTest from './PreTest'
 import Test from './Test'
-import Navigation from './Navigation'
 
 import './style.css'
 
@@ -15,7 +14,6 @@ class App extends Component {
       <div className="admission">
         {this.props.content && this.props.content.example && <PreTest />}
         {this.props.content && !this.props.content.example && <Test />}
-        <Navigation />
       </div>
     )
   }

@@ -1,77 +1,114 @@
 .admission {
   align-items: center;
+  background: white;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   user-select: none;
-  width: 100%;
+  padding: 20px;
 }
 
-.content {
+.admission .content {
   align-items: center;
-  border-bottom: solid 1px rgba(79, 79, 79, 0.8);
-  border-top: solid 1px rgba(79, 79, 79, 0.8);
   display: flex;
+  display: -ms-flexbox;
   flex-direction: column;
   justify-content: center;
   margin: 10px;
-  min-height: 50vh;
+  max-width: 80%;
+  min-height: 44vh;
+  -ms-flex-align: center;
+  -ms-flex-direction: column;
+  -ms-flex-pack: center;
+  padding: 20px;
   text-align: center;
-  width: 100%;
-}
-
-.timer {
-  color: red;
-  font-size: 1.5em;
-  font-family: ZonaProBold;
 }
 
 .choices {
+  -ms-flex-direction: row;
   flex-direction: row;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 90vw;
+  margin-top: 38px;
 }
 
-.btn {
-  background-color: #e0e0e1;
-  border: none;
+.admission .btn {
+  border: solid 1px #7f8c8d;
+  border-radius: 5000px;
   color: #949494;
   cursor: pointer;
   font-family: ZonaProBold;
   font-size: 25px;
   line-height: 50px;
-  margin-right: 3px;
-  min-width: 100px;
+	margin: 2px 6px;
+	min-width: 20px;
   min-height: 50px;
   padding: 0 15px;
   text-align: center;
 }
 
-.btn-active {
-  background-color: rgba(79, 79, 79, 0.8);
+.admission .btn-active {
   color: white;
-  font-family: ZonaProBold;
+  background-color: #3498db;
+  border-color: #3498db;
 }
 
-.btn-nav {
+.admission .btn-nav {
   margin-top: 5px;
 }
 
-.btn-start {
-  color: white;
+.admission .btn-start {
   background-color: rgb(254, 66, 77);
+	border: none;
+	color: white;
+	min-width: 100px;
 }
 
-img {
+.admission img {
   max-width: 100%;
   max-height: 100%;
 }
 
-.navigation {
+.admission .navigation {
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: row;
   flex-direction: row;
+  min-width: 1%;
+  justify-content: flex-end;
+  position: relative;
+  top: 0;
+  right: 0;
+}
+
+.admission .navigation .btn.btn-nav {
+  border-radius: 4px;
+  color: white;
+  background: #34495e;
+  font-weight: normal;
+  width: 10px;
+  margin: 4px;
+  text-align: center;
+}
+
+.pretest-header {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.progress {
+  font-family: ZonaProBold;
+	font-size: 1.2em;
+	min-width: 1%;
 }
 
 .question-content {
@@ -87,4 +124,20 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.test-header {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.time {
+  color: red;
+  font-size: 1em;
+  font-family: ZonaProThin;
+}
+
+.timer {
+	min-width: 1%;
 }

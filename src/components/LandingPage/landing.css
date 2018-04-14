@@ -1,0 +1,11 @@
+@media screen and (max-width: 768px){
+
+  .landing-page-container h2{
+    text-align: center;
+    display: block;
+    font-weight: bold;
+    font-family: "Montserrat", "Roboto", sans-serif;
+    font-size: 2.5em;
+  }
+
+}

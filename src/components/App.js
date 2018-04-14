@@ -1,31 +1,21 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-import NavBar from './NavBar/NavBar'
-import Login from './Login/Login';
-import Content from './Content/Content'
-import Footer from './Footer/Footer'
-
-import './style.css'
+import Platform from './Platform'
+import Landing from './LandingPage'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <NavBar />
-        {!window.localStorage.access_token && <Login />}
-        {window.localStorage.access_token && <Content />}
-        <Footer />
-      </div>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/platform" component={Platform} />{' '}
+          <Route component={Landing} />
+        </Switch>
+      </BrowserRouter>
     )
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    auth: state.auth
-  }
-}
-
-
-export default connect(mapStateToProps)(App)
+export default App

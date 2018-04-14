@@ -1,0 +1,106 @@
+.Background {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  line-height: 22px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: rgba(224, 224, 225, 0.4);
+  padding: 2%;
+  margin: 1% 0;
+}
+
+.Background .double-form-container {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  width: 90%;
+}
+
+.Background .form-container {
+  flex: 1;
+  padding: 10px;
+}
+
+.Background .form-group {
+  display: flex;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.Background .form-group input,
+.Background .form-group > select,
+.Background .form-group > textarea {
+  flex: 2;
+  background-color: rgb(225, 225, 225);
+  border: none;
+  min-height: 22px;
+}
+
+.Background .form-group > label {
+  flex: 1;
+  font-size: 20px;
+  padding-right: 20px;
+  white-space: nowrap;
+}
+
+.Background .label-right {
+  text-align: right;
+}
+
+.Background-title {
+  color: black;
+  font-family: ZonaProBold;
+  font-size: 25px;
+  font-weight: 700;
+  margin: 1% 0 0 0;
+}
+
+.Background-text {
+  font-family: ZonaProThin;
+  font-size: 18px;
+  line-height: 22px;
+  flex: 10;
+}
+
+.Background .toggle {
+  background-color: #e0e0e1;
+  border: none;
+  color: #949494;
+  cursor: pointer;
+  font-family: ZonaProThin;
+  font-size: 18px;
+  flex: 1;
+  margin: 0 1px;
+  max-height: 30px;
+}
+
+.Background .toggle-active {
+  background-color: rgba(79, 79, 79, 0.8);
+  color: white;
+  font-family: ZonaProBold;
+}
+
+.Background .toggle-group {
+  display: flex;
+  flex: 2;
+  align-items: center;
+}
+
+.Background .navigation {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Background .btn-next {
+  border: none;
+  background-color: rgb(254, 66, 77);
+  color: white;
+  cursor: pointer;
+  font-family: ZonaProBold;
+  font-size: 20px;
+  height: 40px;
+  margin: 0 10px;
+  width: 100px;
+}

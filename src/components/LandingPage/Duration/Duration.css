@@ -1,0 +1,68 @@
+.duration-container{
+    display : flex;
+    justify-content: space-between;
+    font-family: "Montserrat", "Roboto", sans-serif;
+    padding: 35px 0 15px;
+}
+
+.duration-description{
+    width :40%;
+    margin :auto;
+    margin-left: 157px;
+}
+
+.duration-description .title-container h2{
+    background-color:rgb(254, 66, 77);
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    display: inline;
+    font-weight: bold;
+    font-size: 2.25em;
+    margin-bottom: 7px;
+    font-family: "Montserrat", "Roboto", sans-serif;
+}
+
+.duration-description-link h3{
+  font-size: 1.5em;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+.duration-description .text-duration-container{
+    font-size: 1.5em;
+    margin: 25px 0px;
+    text-align: justify;
+}
+
+.duration-img{
+    width:40%;
+    margin: auto;
+    text-align: center;
+}
+.duration-img img{
+    width: 70%;
+    margin: auto;
+}
+
+@media screen and (max-width: 980px) {
+    .duration-container{
+        flex-direction: column;
+    }
+    .duration-img{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+    .duration-img img{
+        width: 70%;
+        margin:auto;
+
+    }
+    .duration-description{
+        width: 80%;
+        margin: auto;
+    }
+    .title-container{
+        text-align: center;
+    }
+}

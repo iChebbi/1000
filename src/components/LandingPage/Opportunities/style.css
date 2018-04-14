@@ -1,0 +1,57 @@
+.opportunities-container{
+    width: 72%;
+    margin: 37px auto 15px;
+}
+
+.opportunities-titles h2{
+    background-color:rgb(254, 66, 77);
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    display: inline;
+    font-weight: bold;
+    font-size: 2.25em;
+    margin-bottom: 7px;
+    font-family: "Montserrat", "Roboto", sans-serif;
+}
+
+.opportunities-titles p {
+    font-size: 1.5em;
+    font-family: "Montserrat", "Roboto", sans-serif;
+    text-align: justify;
+    margin-top: 17px;
+}
+
+.opportunity-list{
+    display: flex;
+}
+
+.opportunity-item{
+    width : 22%;
+    margin: auto;
+    margin-top: 17px;
+    margin-bottom: 17px;
+    line-height: 1.5em;
+}
+
+.opportunity-item p{
+  font-size: 1.2em;
+  margin-top: 0px;
+}
+
+.opportunity-icon{
+    font-size: 3.5em;
+    padding: 0 8px 2px 0px;
+    float: left;
+}
+
+@media screen and (max-width : 768px){
+    .opportunity-list{
+        flex-direction: column;
+    }
+    .opportunity-item{
+        width : 75%;
+        margin: auto;
+        margin-bottom: 10px;
+        margin-top: 25px;
+    }
+}

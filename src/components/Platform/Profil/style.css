@@ -22,7 +22,8 @@
   flex: 2;
   background-color: rgb(225, 225, 225);
   border: none;
-  min-height: 22px;
+	min-height: 22px;
+	padding-left : 10px;
 }
 
 .Profile .form-group > label {
@@ -107,4 +108,9 @@
   height: 40px;
   margin: 0 10px;
   width: 100px;
+}
+
+.Profile input[type='date']::-webkit-outer-spin-button,
+.Profile input[type='date']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }

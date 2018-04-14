@@ -84,22 +84,20 @@
   outline: none;
   height: 30px;
   margin-left: 17px;
-	padding: 3px 7px;
-	width: 90%;
+  padding: 3px 7px;
+  width: 90%;
 }
 
-.form-container input[type='text'],
-.form-container input[type='email'],
-.form-container input[type='number'] {
+.form-component-container .form-container input[type='text'],
+.form-component-container .form-container input[type='email'],
+.form-component-container .form-container input[type='number'] {
   background-color: lightGrey;
   color: black;
 }
 
-
-
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 .submit-button {

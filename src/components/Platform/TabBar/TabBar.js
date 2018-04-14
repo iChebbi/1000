@@ -11,7 +11,7 @@ class TabBar extends Component {
     return (
       <div className="tab-container">
         <button componentname="Conditions" className={(this.props.activeTab === 'Conditions' ? 'tab-btn tab-btn-active' : 'tab-btn' )} onClick={ (e) => this.setTab(e) } > Conditions </button>
-        <button componentname="Profile" className={(this.props.activeTab === 'Profile' ? 'tab-btn tab-btn-active' : 'tab-btn' )} onClick={ (e) => this.setTab(e) } >Profil</button>
+        <button componentname="Profil" className={(this.props.activeTab === 'Profil' ? 'tab-btn tab-btn-active' : 'tab-btn' )} onClick={ (e) => this.setTab(e) } >Profil</button>
         <button componentname="Background" className={(this.props.activeTab === 'Background' ? 'tab-btn tab-btn-active' : 'tab-btn' )} onClick={ (e) => this.setTab(e) } >Background</button>
         <button componentname="Conseils" className={(this.props.activeTab === 'Conseils' ? 'tab-btn tab-btn-active' : 'tab-btn' )} onClick={ (e) => this.setTab(e) } >Conseils</button>
         <button disabled componentname="Test" className={(this.props.activeTab === 'Test' ? 'tab-btn tab-btn-active' : 'tab-btn' )} >Test en ligne</button>

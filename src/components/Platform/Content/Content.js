@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import TabBar from '../TabBar/TabBar'
 import Conditions from '../Conditions/Conditions'
-import Profile from '../Profile/Profile'
+import Profil from '../Profil/Profil'
 import Background from '../Background/Background'
 import Conseils from '../Conseils/Conseils'
 
@@ -27,8 +27,8 @@ class Content extends Component {
     switch (tabName) {
       case 'Conditions':
         return <Conditions setTab={this.setTab} />
-      case 'Profile':
-        return <Profile setTab={this.setTab} />
+      case 'Profil':
+        return <Profil setTab={this.setTab} />
       case 'Background':
         return <Background setTab={this.setTab} />
       case 'Conseils':

@@ -4,22 +4,38 @@ import './style.css'
 
 import { base_url } from '../../../assets/env'
 
-class Coordonnees extends Component {
+class Profil extends Component {
   state = {
     step: 'Coordonnées',
     info: {
-      gender: 'male'
+      gender: 'famale'
     },
     education: {
-      bacDegree: 'Master'
+      degree: 'Licence'
     },
     assos: {
-      board: true,
+      board: false,
       member: false
     }
   }
 
-  loadUser = () => {}
+  componentDidMount = async () => {
+    await this.loadUser()
+  }
+
+  loadUser = async () => {
+    try {
+      const response = await axios.get(
+        base_url + '/api/user/' + window.localStorage.user_id,
+        {
+          headers: { token: window.localStorage.access_token }
+        }
+      )
+      if (response.status === 200) this.setState(response.data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   userUpdate = async () => {
     try {
@@ -34,7 +50,6 @@ class Coordonnees extends Component {
           headers: { token: window.localStorage.access_token }
         }
       )
-      console.log(response.status === 200)
       return response.status === 200
     } catch (error) {
       console.log(error)
@@ -74,7 +89,7 @@ class Coordonnees extends Component {
             <label className="label-right">Nom</label>
             <input
               name="firstName"
-              value={this.state.info.firstName}
+              value={this.state.info.firstName || ''}
               onChange={this.handleInfoInputChange}
               type="text"
               required
@@ -85,6 +100,7 @@ class Coordonnees extends Component {
             <label className="label-right">Prénom</label>
             <input
               name="lastName"
+              value={this.state.info.lastName || ''}
               onChange={this.handleInfoInputChange}
               type="text"
               required
@@ -95,7 +111,11 @@ class Coordonnees extends Component {
             <label className="label-right">Sexe</label>
             <div className="toggle-group">
               <button
-                onClick={() => this.setState({ info: { gender: 'female' } })}
+                onClick={() =>
+                  this.setState({
+                    info: { ...this.state.info, gender: 'female' }
+                  })
+                }
                 className={
                   this.state.info.gender === 'female'
                     ? 'toggle toggle-active'
@@ -105,7 +125,11 @@ class Coordonnees extends Component {
                 Femme
               </button>
               <button
-                onClick={() => this.setState({ info: { gender: 'male' } })}
+                onClick={() =>
+                  this.setState({
+                    info: { ...this.state.info, gender: 'male' }
+                  })
+                }
                 className={
                   this.state.info.gender === 'male'
                     ? 'toggle toggle-active'
@@ -122,6 +146,7 @@ class Coordonnees extends Component {
             <input
               name="birthdate"
               onChange={this.handleInfoInputChange}
+              value={this.state.info.birthdate || ''}
               type="Date"
               required
             />
@@ -132,6 +157,7 @@ class Coordonnees extends Component {
             <input
               name="cin"
               onChange={this.handleInfoInputChange}
+              value={this.state.info.cin || ''}
               type="text"
               required
             />
@@ -144,6 +170,7 @@ class Coordonnees extends Component {
             <input
               name="email"
               onChange={this.handleInfoInputChange}
+              value={this.state.email || ''}
               type="email"
               required
             />
@@ -154,6 +181,7 @@ class Coordonnees extends Component {
             <input
               name="phone"
               onChange={this.handleInfoInputChange}
+              value={this.state.info.phone || ''}
               type="text"
               required
             />
@@ -161,7 +189,11 @@ class Coordonnees extends Component {
 
           <div className="form-group">
             <label className="label-right">Gouvernorat</label>
-            <select name="governorate" onChange={this.handleInfoInputChange}>
+            <select
+              name="governorate"
+              onChange={this.handleInfoInputChange}
+              value={this.state.info.governorate || ''}
+            >
               <option value="" />
               <option value="Ariana">Ariana</option>
               <option value="Béja">Béja</option>
@@ -195,6 +227,7 @@ class Coordonnees extends Component {
             <input
               name="city"
               onChange={this.handleInfoInputChange}
+              value={this.state.info.city || ''}
               type="text"
               required
             />
@@ -205,6 +238,7 @@ class Coordonnees extends Component {
             <input
               name="address"
               onChange={this.handleInfoInputChange}
+              value={this.state.info.address || ''}
               type="text"
             />
           </div>
@@ -219,15 +253,36 @@ class Coordonnees extends Component {
         <div className="form-container">
           <div className="form-group">
             <label className="label-right">Année Obtention Bac</label>
-            <select name="bacYear" onChange={this.handleEduInputChange}>
+            <select
+              name="bacYear"
+              onChange={this.handleEduInputChange}
+              value={this.state.education.bacYear || ''}
+            >
               <option value="" />
+              <option value="2014">2014</option>
+              <option value="2013">2013</option>
+              <option value="2012">2012</option>
+              <option value="2011">2011</option>
+              <option value="2010">2010</option>
               <option value="2009">2009</option>
+              <option value="2008">2008</option>
+              <option value="2007">2007</option>
+              <option value="2006">2006</option>
+              <option value="2004">2004</option>
+              <option value="2003">2003</option>
+              <option value="2002">2002</option>
+              <option value="2001">2001</option>
+              <option value="2000">2000</option>
             </select>
           </div>
 
           <div className="form-group">
             <label className="label-right">Spécialité Bac</label>
-            <select name="bacMajor" onChange={this.handleEduInputChange}>
+            <select
+              name="bacMajor"
+              onChange={this.handleEduInputChange}
+              value={this.state.education.bacMajor || ''}
+            >
               <option value="" />
               <option value="Sciences expérimentales">
                 Sciences expérimentales
@@ -246,6 +301,7 @@ class Coordonnees extends Component {
             <input
               name="bacAvg"
               onChange={this.handleEduInputChange}
+              value={this.state.education.bacAvg || ''}
               type="text"
             />
           </div>
@@ -255,10 +311,12 @@ class Coordonnees extends Component {
             <div className="toggle-group">
               <button
                 onClick={() =>
-                  this.setState({ education: { bacDegree: 'Licence' } })
+                  this.setState({
+                    education: { ...this.state.education, degree: 'Licence' }
+                  })
                 }
                 className={
-                  this.state.education.bacDegree === 'Licence'
+                  this.state.education.degree === 'Licence'
                     ? 'toggle toggle-active'
                     : 'toggle'
                 }
@@ -267,10 +325,12 @@ class Coordonnees extends Component {
               </button>
               <button
                 onClick={() =>
-                  this.setState({ education: { bacDegree: 'Ing' } })
+                  this.setState({
+                    education: { ...this.state.education, degree: 'Ing' }
+                  })
                 }
                 className={
-                  this.state.education.bacDegree === 'Ing'
+                  this.state.education.degree === 'Ing'
                     ? 'toggle toggle-active'
                     : 'toggle'
                 }
@@ -279,10 +339,12 @@ class Coordonnees extends Component {
               </button>
               <button
                 onClick={() =>
-                  this.setState({ education: { bacDegree: 'Master' } })
+                  this.setState({
+                    education: { ...this.state.education, degree: 'Master' }
+                  })
                 }
                 className={
-                  this.state.education.bacDegree === 'Master'
+                  this.state.education.degree === 'Master'
                     ? 'toggle toggle-active'
                     : 'toggle'
                 }
@@ -306,8 +368,9 @@ class Coordonnees extends Component {
               Dernier Établissement fréquenté
             </label>
             <input
-              name="lastUni"
+              name="uni"
               onChange={this.handleEduInputChange}
+              value={this.state.education.uni || ''}
               type="text"
             />
           </div>
@@ -315,8 +378,9 @@ class Coordonnees extends Component {
           <div className="form-group">
             <label className="label-right">Spécialité</label>
             <input
-              name="lastMajor"
+              name="major"
               onChange={this.handleEduInputChange}
+              value={this.state.education.major || ''}
               type="text"
             />
           </div>
@@ -373,6 +437,7 @@ class Coordonnees extends Component {
               <input
                 name="organization"
                 onChange={this.handleAssosInputChange}
+                value={this.state.assos.organization || ''}
                 type="text"
               />
             </div>
@@ -423,6 +488,7 @@ class Coordonnees extends Component {
                 <input
                   name="organization"
                   onChange={this.handleAssosInputChange}
+                  value={this.state.assos.organization || ''}
                   type="text"
                 />
               </div>
@@ -487,4 +553,4 @@ class Coordonnees extends Component {
   }
 }
 
-export default Coordonnees
+export default Profil

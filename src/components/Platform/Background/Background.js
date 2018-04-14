@@ -1,18 +1,72 @@
 import React, { Component } from 'react'
+import axios from 'axios'
+
+import { base_url } from '../../../assets/env'
+
 import './style.css'
 
 class Background extends Component {
   state = {
     step: 0,
-    notionsToggle: false,
-    projetToggle: false,
-    stageToggle: false
+    background: {
+      notionsToggle: false,
+      projetToggle: false,
+      stageToggle: false
+    }
   }
 
+  loadUser = async () => {
+    try {
+      const response = await axios.get(
+        base_url + '/api/user/' + window.localStorage.user_id,
+        {
+          headers: { token: window.localStorage.access_token }
+        }
+      )
+      if (response.status === 200) this.setState(response.data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  userUpdate = async () => {
+    try {
+      const response = await axios.put(
+        base_url + '/api/user/' + window.localStorage.user_id,
+        {
+          background: this.state.background
+        },
+        {
+          headers: { token: window.localStorage.access_token }
+        }
+      )
+      return response.status === 200
+    } catch (error) {
+      console.log(error)
+      return false
+    }
+  }
+
+  componentDidMount = () => {
+    this.loadUser()
+  }
+
+  handleInputChange = e => {
+    this.setState({
+      background: {
+        ...this.state.background,
+        [`${e.target.name}`]: e.target.value
+      }
+    })
+  }
+
+  backStep = () => {
+    this.state.step > 0 && this.setState({ step: this.state.step - 1 })
+  }
   nextStep = () => {
     this.state.step < 5
       ? this.setState({ step: this.state.step + 1 })
-      : this.props.setTab('Conseils')
+      : this.userUpdate() && this.props.setTab('Conseils')
   }
 
   renderFirstStep = () => {
@@ -25,9 +79,16 @@ class Background extends Component {
             </p>
             <div className="toggle-group">
               <button
-                onClick={() => this.setState({ notionsToggle: false })}
+                onClick={() =>
+                  this.setState({
+                    background: {
+                      ...this.state.background,
+                      notionsToggle: false
+                    }
+                  })
+                }
                 className={
-                  this.state.notionsToggle === false
+                  this.state.background.notionsToggle === false
                     ? 'toggle toggle-active'
                     : 'toggle'
                 }
@@ -35,9 +96,16 @@ class Background extends Component {
                 Non
               </button>
               <button
-                onClick={() => this.setState({ notionsToggle: true })}
+                onClick={() =>
+                  this.setState({
+                    background: {
+                      ...this.state.background,
+                      notionsToggle: true
+                    }
+                  })
+                }
                 className={
-                  this.state.notionsToggle === true
+                  this.state.background.notionsToggle === true
                     ? 'toggle toggle-active'
                     : 'toggle'
                 }
@@ -47,10 +115,16 @@ class Background extends Component {
             </div>
           </div>
 
-          {this.state.notionsToggle && (
+          {this.state.background.notionsToggle && (
             <div className="form-group">
               <label>Citez-les</label>
-              <textarea name="" id="" cols="30" rows="10" />
+              <textarea
+                name="notions"
+                cols="30"
+                rows="10"
+                onChange={this.handleInputChange}
+                value={this.state.background.notions || ''}
+              />
             </div>
           )}
         </div>
@@ -68,9 +142,16 @@ class Background extends Component {
             </p>
             <div className="toggle-group">
               <button
-                onClick={() => this.setState({ projetToggle: false })}
+                onClick={() =>
+                  this.setState({
+                    background: {
+                      ...this.state.background,
+                      projetToggle: false
+                    }
+                  })
+                }
                 className={
-                  this.state.projetToggle === false
+                  this.state.background.projetToggle === false
                     ? 'toggle toggle-active'
                     : 'toggle'
                 }
@@ -78,9 +159,16 @@ class Background extends Component {
                 Non
               </button>
               <button
-                onClick={() => this.setState({ projetToggle: true })}
+                onClick={() =>
+                  this.setState({
+                    background: {
+                      ...this.state.background,
+                      projetToggle: true
+                    }
+                  })
+                }
                 className={
-                  this.state.projetToggle === true
+                  this.state.background.projetToggle === true
                     ? 'toggle toggle-active'
                     : 'toggle'
                 }
@@ -90,10 +178,16 @@ class Background extends Component {
             </div>
           </div>
 
-          {this.state.projetToggle && (
+          {this.state.background.projetToggle && (
             <div className="form-group">
               <label>Décrire le birèvement</label>
-              <textarea name="" id="" cols="30" rows="10" />
+              <textarea
+                name="projets"
+                cols="30"
+                rows="10"
+                onChange={this.handleInputChange}
+                value={this.state.background.projets || ''}
+              />
             </div>
           )}
         </div>
@@ -111,9 +205,13 @@ class Background extends Component {
             </p>
             <div className="toggle-group">
               <button
-                onClick={() => this.setState({ stageToggle: false })}
+                onClick={() =>
+                  this.setState({
+                    background: { ...this.state.background, stageToggle: false }
+                  })
+                }
                 className={
-                  this.state.stageToggle === false
+                  this.state.background.stageToggle === false
                     ? 'toggle toggle-active'
                     : 'toggle'
                 }
@@ -121,9 +219,13 @@ class Background extends Component {
                 Non
               </button>
               <button
-                onClick={() => this.setState({ stageToggle: true })}
+                onClick={() =>
+                  this.setState({
+                    background: { ...this.state.background, stageToggle: true }
+                  })
+                }
                 className={
-                  this.state.stageToggle === true
+                  this.state.background.stageToggle === true
                     ? 'toggle toggle-active'
                     : 'toggle'
                 }
@@ -133,10 +235,16 @@ class Background extends Component {
             </div>
           </div>
 
-          {this.state.stageToggle && (
+          {this.state.background.stageToggle && (
             <div className="form-group">
               <label>Décrire ce que vous avez fait</label>
-              <textarea name="" id="" cols="30" rows="10" />
+              <textarea
+                name="stages"
+                cols="30"
+                rows="10"
+                onChange={this.handleInputChange}
+                value={this.state.background.stages || ''}
+              />
             </div>
           )}
         </div>
@@ -156,7 +264,13 @@ class Background extends Component {
           </div>
 
           <div className="form-group">
-            <textarea name="" id="" cols="30" rows="10" />
+            <textarea
+              name="projetFier"
+              cols="30"
+              rows="10"
+              onChange={this.handleInputChange}
+              value={this.state.background.projetFier || ''}
+            />
           </div>
         </div>
       </React.Fragment>
@@ -175,7 +289,13 @@ class Background extends Component {
           </div>
 
           <div className="form-group">
-            <textarea name="" id="" cols="30" rows="10" />
+            <textarea
+              name="motivation"
+              cols="30"
+              rows="10"
+              onChange={this.handleInputChange}
+              value={this.state.background.motivation || ''}
+            />
           </div>
         </div>
       </React.Fragment>
@@ -193,31 +313,50 @@ class Background extends Component {
           </div>
 
           <div className="form-group">
-            <textarea name="" id="" cols="30" rows="10" />
+            <textarea
+              name="reussir"
+              cols="30"
+              rows="10"
+              onChange={this.handleInputChange}
+              value={this.state.background.reussir || ''}
+            />
           </div>
         </div>
       </React.Fragment>
     )
   }
 
-	renderForms = () => {
-		switch(this.state.step) {
-			case 0 : return this.renderFirstStep()
-			case 1 : return this.renderSecondStep() 
-			case 2 : return this.renderThirdStep()
-			case 3 : return this.renderFourthStep()
-			case 4 : return this.renderFifthStep()
-			case 5 : return this.renderSixthStep()
-			default : return this.renderFirstStep()
-		}
-	}
+  renderForms = () => {
+    switch (this.state.step) {
+      case 0:
+        return this.renderFirstStep()
+      case 1:
+        return this.renderSecondStep()
+      case 2:
+        return this.renderThirdStep()
+      case 3:
+        return this.renderFourthStep()
+      case 4:
+        return this.renderFifthStep()
+      case 5:
+        return this.renderSixthStep()
+      default:
+        return this.renderFirstStep()
+    }
+  }
 
   render() {
     return (
       <div className="Background">
         <div className="Background-title">Background informatique</div>
+
         <div className="double-form-container">{this.renderForms()}</div>
         <div className="navigation">
+          {this.state.step !== 0 && (
+            <button className="btn-next" onClick={() => this.backStep()}>
+              Back
+            </button>
+          )}
           <button className="btn-next" onClick={() => this.nextStep()}>
             Next
           </button>
@@ -226,5 +365,6 @@ class Background extends Component {
     )
   }
 }
+
 
 export default Background

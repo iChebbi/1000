@@ -52,7 +52,7 @@ class Conditions extends Component {
           </div>
         </div>
 				<div className="navigation">
-					<button className="btn-next" onClick={()=> this.props.setTab('Profile')}>Next</button>
+					<button className="btn-next" onClick={()=> this.props.setTab('Profil')}>Next</button>
 				</div>
       </div>
     )

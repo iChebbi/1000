@@ -1,13 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import axios from 'axios'
-
 import { login } from '../../../actions/authActions'
 
 import { base_url } from '../../../assets/env'
 
 import './Form.css'
-
 class Form extends React.Component {
   onChangeStateValue = e => {
     this.setState({
@@ -17,6 +15,10 @@ class Form extends React.Component {
 
   handleSubmit = async e => {
     e.preventDefault()
+    if (window.localStorage.access_token) {
+      this.props.login()
+      window.location.pathname = '/platform'
+    }
     try {
       const response = await axios.post(base_url + '/api/register', {
         email: this.state.email,
@@ -46,18 +48,27 @@ class Form extends React.Component {
         <div className="slide-container">
           <div className="description-container">
             <h1>Deviens Développeur</h1>
-            <h4>et démarre ta carrière dans l’informatique !</h4>
+            <h4>et démarre ta carrière dans le numérique!</h4>
 
             <p>
-              1000 Coders est un programme de 1000 bourses sur 3 ans qui permet
-              à ceux qui répondent aux conditions de suivre le programme Full
-              Time Coding de GoMyCode...
+              1000 Coders est un programme de 1000 bourses dans le programme{' '}
+              <a href="https://gomycode.tn/full-time" target="_blank" rel="noopener noreferrer">
+                Full Time Coding
+              </a>{' '}
+              de GoMyCode. Il s'adresse aux jeunes diplômés de l’enseignement
+              supérieur qui veulent démarrer une carrière dans le numérique en
+              tant que:
             </p>
+            <ul>
+              <li>Développeur web fullstack en entreprise</li>
+              <li>Développeur web fullstack freelancer</li>
+              <li>Co-fondateur d’une startup</li>
+            </ul>
           </div>
 
           <form onSubmit={this.handleSubmit} className="form-container">
             <div className="input-container">
-              <div className="input-line1">
+              <div className="input-line">
                 <div>
                   <h4>
                     <label> Nom </label>
@@ -81,7 +92,7 @@ class Form extends React.Component {
                   />
                 </div>
               </div>
-              <div className="input-line2">
+              <div className="input-line">
                 <div>
                   <h4>
                     <label> Numéro de téléphone </label>
@@ -103,6 +114,7 @@ class Form extends React.Component {
                     type="email"
                     name="email"
                     onChange={this.onChangeStateValue}
+                    required
                   />
                 </div>
               </div>

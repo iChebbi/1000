@@ -1,79 +1,70 @@
 .wheretobegin-container{
-    display: flex;
-    justify-content: space-around;
-    height:90vh;
-    height:auto;
-    background-color: rgb(244, 243, 243);
+  background-color: rgb(254, 66, 77);
+  color: white;
+  text-align: center;
+  padding: 15px 0 40px;
 }
 
-.wheretobegin-text-container{
-    width: 36%;
-    margin :25px auto;
+.wheretobegin-container h2{
+  background-color: rgb(254, 66, 77);
+  color: white;
+  display: inline-block;
+  font-size: 2.8em;
+  margin-bottom: 35px;
+  font-family: "Montserrat";
+  font-weight: bold;
 }
 
-.wheretobegin-text-container h2{
-    background-color:rgb(254, 66, 77);
-    font-weight: bold;
-    font-family: "Montserrat";
-    color: rgb(255, 255, 255);
-    display: inline-block;
-    font-size: 2.25em;
-    margin: 15px;
+.wheretobegin-container .steps{
+  margin: 15px auto;
+  width: 80%;
+  max-width: 80%;
+}
+
+.steps .step{
+  text-align: center;
+  width: 70%;
+  margin: 12px auto;
+}
+
+.wheretobegin-container .number{
+  color: white;
+  text-align: center;
+  width: 50px;
+  font-size: 2.5em;
+  font-family: "Montserrat", sans-serif;
+  padding: 0px 12px;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin: 2px auto;
+}
+
+.wheretobegin-container h3{
+  font-size: 1.35em;
+  font-family: "Montserrat";
+  font-weight: 600;
+}
+
+.wheretobegin-container p{
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  font-family: "Montserrat";
+}
+.wheretobegin-container a{
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+.wheretobegin-container a:hover{
+  cursor: pointer;
+  color : black;
+}
+
+
+@media screen and (max-width: 768px){
+  .wheretobegin-container h2{
+    font-size: 2.5em;
   }
-
-  .List-container{
-    margin: 15px auto 25px;
-  }
-
-  .list-element{
-      display : flex;
-      align-items: center;
-      font-size: 1.4em;
-  }
-
-  .list-element .number{
-      font-size: 2.8em;
-      font-weight: bold;
-      color : rgb(254, 66, 77);
-      margin: -7px 15px 15px;
-      align-self: flex-start;
-  }
-
- .wheretobegin-img-container{
-        position: relative;
-        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
-        background-image: url('howtobegin.png');
-        background-size: cover;
-        background-position: center;
-        width: 41%;
- }
-
- .gradiant{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(255,255,255,0.65);
-  }
-
-@media screen and (max-width: 980px) {
-    .wheretobegin-container{
-        flex-direction: column;
-    }
-
-    .wheretobegin-img-container{
-        width : 100%;
-        margin: auto;
-        height: 550px;
-        margin-top: 27px;
-    }
-
-    .wheretobegin-text-container{
-        width: 80%;
-        margin : auto;
-        text-align: left;
-        text-align: justify;
-    }
-
-  }
+}

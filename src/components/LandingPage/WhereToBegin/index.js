@@ -1,45 +1,44 @@
-import React from "react";
-import "./WhereToBegin.css";
+import React from 'react'
+import './WhereToBegin.css'
 
 class WhereToBegin extends React.Component {
-  render() {
+  render () {
     return (
-      <div className="wheretobegin-container">
-        <div className="wheretobegin-text-container">
-          <h2>Par où commencer ? </h2>
-
-          <div className="List-container">
-            <div className = "list-element" >
-              <p className="number"> 1 </p>
-              <p className= "description">
-                Inscription sur la page gomycode.tn/1000 et remplissage du
-                formulaire d'Inscription
-              </p>
+      <div className='wheretobegin-container'>
+        <div className='container'>
+          <h2>Comment participer?</h2>
+          <div className='steps'>
+            <div className='step'>
+              <div className='number'>1</div>
+              <h3>Formulaire en ligne</h3>
+              <p className='mt10'>
+              Inscription sur le lien <a target='_blank' link='www.gomycode.tn/1000'>GOMYCODE 1000 CODERS</a> et remplissage du formulaire
+              des données personnelles et des motivations.
+            </p>
             </div>
-            <div className = "list-element">
-              <p className="number"> 2 </p>
-              <p className= "description">
-                Test en ligne : la plateforme du test en ligne sera ouverte du
-                1er au 8 juin 2018
-              </p>
+            <div className='step'>
+              <div className='number'>2</div>
+              <h3>Test en ligne</h3>
+              <p className='mt10'>
+              Passage des tests logiques en ligne sur la platforme qui s'ouvre après
+              la soumission du formulaire de l'étape précédente.
+            </p>
             </div>
-            <div className = "list-element">
-              <p className="number"> 3 </p>
-              <p className= "description">
-                Le challenge : cette épreuve va décider de ton admission dans le
-                programme 1000. Elle permet d'identifier les plus motivés et de
-                confirmer la capacité des étudiants à réussir le programme
-              </p>
+            <div className='step'>
+              <div className='number'>3</div>
+              <h3>Epreuves sur place</h3>
+              <p className='mt10'>
+              Vous serez invités à des épreuves sur place
+              (challenge de problem solving et entretiens de motivations)
+              après la réussite du test en ligne.
+            </p>
             </div>
           </div>
         </div>
 
-        <div className="wheretobegin-img-container">
-          <div className="gradiant" />
-        </div>
       </div>
-    );
+    )
   }
 }
 
-export default WhereToBegin;
+export default WhereToBegin

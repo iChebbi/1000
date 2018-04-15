@@ -1,0 +1,130 @@
+.conditions-container{
+    min-height: 75vh;
+    font-family: "Montserrat", sans-serif;
+    text-align: justify;
+    display: flex;
+    justify-content:space-between;
+}
+
+.conditions-container-left{
+  width: 55%;
+  max-width: 55%;
+  margin: 45px 0px 45px auto;
+}
+
+.conditions-container-intro-title{
+  margin-bottom: 30px;
+  margin-top: 2px;
+}
+
+.conditions-container-intro h2{
+    background-color:rgb(254, 66, 77);
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    display: inline;
+    font-weight: bold;
+    font-size: 2.8em;
+    line-height: 1em;
+    font-family: "Montserrat", sans-serif;
+}
+
+.conditions-container-intro  p{
+  font-size: 1.5em;
+}
+
+.conditions{
+  margin-top: 25px;
+  text-align: center;
+}
+
+.condition{
+  text-align: center;
+}
+
+.condition p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2em;
+  padding: 25px 15px 0px;
+  text-align: center;
+
+}
+
+.condition img{
+  padding-left: 7px;
+  padding-right: 7px;
+  height: 70px;
+  width: 85px;
+}
+
+.conditions-img {
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+  background-image: url('conditions.jpg');
+  background-position: center right;
+  background-size: cover;
+  width: 35%;
+  position: relative;
+  margin-left: 45px;
+}
+
+.light-gradiant{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient( rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55) );
+  background: -webkit-linear-gradient(rgba(255,255,255,0.55), rgba(255,255,255,0.55) );
+}
+
+.condition-title{
+  font-size: 1em;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1250px){
+  .conditions-img{
+    display: none;
+  }
+  .conditions-container-left{
+    width: 80%;
+    max-width: 80%;
+    margin: 45px auto;
+  }
+
+  .conditions-container-intro-title{
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 846px) {
+  .conditions-img {
+    background-size: cover;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .conditions-container-left{
+    margin: 22px auto;
+  }
+  .conditions-container-intro .conditions-container-intro-title{
+    text-align: center;
+  }
+  .conditions-container-intro h2{
+    font-size: 2.5em;
+  }
+  .conditions-container-intro p{
+    font-size: 1.2em;
+  }
+  .condition p{
+    font-size: 1.125em;
+  }
+}
+
+@media screen and (max-width: 576px){
+  .conditions-container-left{
+    width: 90%;
+    max-width: 90%;
+    margin: 18px auto;
+  }
+}

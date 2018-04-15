@@ -17,7 +17,7 @@ import { base_url } from '../../../assets/env'
 class Test extends Component {
   componentDidMount = async () => {
     try {
-      const response = await axios.get(base_url + '/api/questions/examples', {
+      const response = await axios.get(base_url + '/api/questions', {
         headers: { token: window.localStorage.access_token }
       })
       response.status === 200 && this.props.changeContent(response.data)

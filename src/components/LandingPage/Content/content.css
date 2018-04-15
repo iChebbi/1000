@@ -3,11 +3,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 75vh ;
-    padding: 100px 0;
+    min-height: 55vh ;
+    padding: 45px 0 25px;
     position:relative;
     font-family: "Montserrat", "Roboto", sans-serif;
     color: rgb(255, 255, 255);
+
 }
 
 .dark-gradiant{
@@ -16,36 +17,65 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+    background: linear-gradient( rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65) );
+    background: -webkit-linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65) );
   }
 
 .content-text{
-    width :75%;
+    width: 80%;
     margin: auto;
     position: relative;
 }
-.content-text h2{
+
+.content-text-header{
+  text-align: center;
+}
+
+.content-text-header h2{
     background-color:rgb(254, 66, 77);
     font-weight: bold;
     color: rgb(255, 255, 255);
     display: inline;
     font-weight: bold;
-    font-size: 2.25em;
+    font-size: 2.8em;
+    text-align: center;
   }
 
 .content-text p{
     text-align: justify;
     font-size: 1.5em;
-    margin-top: 25px;
+    margin-top: 50px;
     letter-spacing: .0125em;
 }
 
-.content-text span{
-  font-weight: bold;
+.content-text li{
+  list-style-type: none;
+  font-size: 1.5em;
+  font-family: "Montserrat", sans-serif;
 }
 
-@media screen and (max-width: 980px) {
+.content-text li::before{
+  content: '- ';
+}
+
+.content-text a{
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+.content-text a:hover{
+  cursor: pointer;
+  color : rgb(254, 66, 77);
+}
+
+@media screen and (max-width: 768px) {
+  .content-text h2{
+    font-size: 2.5em;
+  }
     .content-container{
       height: auto;
+      text-align: center;
     }
 }

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Countdown from 'react-countdown-now'
 
-import { timeIsUp } from '../../../actions/contentActions'
+import { interrupt } from '../../../actions/contentActions'
 import './circle.css'
 
 class Timer extends Component {
@@ -30,7 +30,7 @@ class Timer extends Component {
   }
 
   state = {
-    timeToGo: 1500000
+    timeToGo: this.props.content.timeToGo
   }
 
   render() {
@@ -39,7 +39,7 @@ class Timer extends Component {
         <Countdown
           onTick={() => this.setState({ timeToGo: this.state.timeToGo - 1000 })}
           date={Date.now() + this.state.timeToGo}
-          onComplete={() => this.props.timeIsUp(this.props.content)}
+          onComplete={() => this.props.interrupt('Time is UP !')}
           renderer={this.renderCountdown}
         />
       </div>
@@ -55,7 +55,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    timeIsUp: content => dispatch(timeIsUp(content))
+    interrupt: content => dispatch(interrupt(content))
   }
 }
 

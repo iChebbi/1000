@@ -44,9 +44,11 @@ class Content extends Component {
     return (
       <div className="Content">
         <React.Fragment>
-          <p className="content-title">Candidature</p>
           {!this.state.extended && (
-            <TabBar activeTab={this.state.activeTab} setTab={this.setTab} />
+            <div>
+              <p className="content-title">Candidature</p>
+              <TabBar activeTab={this.state.activeTab} setTab={this.setTab} />
+            </div>
           )}
           {this.renderContent(this.state.activeTab)}
         </React.Fragment>

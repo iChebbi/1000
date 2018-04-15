@@ -7,6 +7,7 @@ class Question extends Component {
       <div className="content">
         {this.props.content.questions && (
           <React.Fragment>
+            {this.props.content.example && <h3>Example Question</h3>}
             {this.props.content.questions[this.props.content.currentQuestion]
               .image && (
               <img
@@ -18,24 +19,12 @@ class Question extends Component {
                 alt=""
               />
             )}
-            <h4>
+            <h4 className="question-text">
               {
                 this.props.content.questions[this.props.content.currentQuestion]
                   .content
               }{' '}
             </h4>
-            {this.props.content.example &&
-              this.props.content.currentQuestion + 1 &&
-              this.props.content.questions.length &&
-              this.props.content.currentQuestion + 1 ===
-                this.props.content.questions.length && (
-                <div
-                  className="btn btn-start"
-                  onClick={() => this.props.startTest()}
-                >
-                  Start
-                </div>
-              )}
           </React.Fragment>
         )}
       </div>

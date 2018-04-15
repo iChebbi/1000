@@ -3,7 +3,8 @@ import { connect } from 'react-redux'
 import {
   nextQuestion,
   previousQuestion,
-  startTest
+  startTest,
+  finishAndSubmit
 } from '../../../actions/contentActions'
 
 class Choices extends Component {
@@ -13,7 +14,7 @@ class Choices extends Component {
         {!this.props.content.done && (
           <React.Fragment>
             {this.props.content.questions &&
-              this.props.content.currentQuestion + 1 !==
+              this.props.content.currentQuestion + 1 <=
                 this.props.content.questions.length && (
                 <React.Fragment>
                   {this.props.content.currentQuestion !== 0 && (
@@ -26,13 +27,42 @@ class Choices extends Component {
                       &#60;
                     </div>
                   )}
-                  <div
-                    className="btn btn-nav"
-                    onClick={() => this.props.nextQuestion(this.props.content)}
-                  >
-                    &#62;
-                  </div>
+                  {this.props.content.currentQuestion + 1 !==
+                    this.props.content.questions.length && (
+                    <div
+                      className="btn btn-nav"
+                      onClick={() =>
+                        this.props.nextQuestion(this.props.content)
+                      }
+                    >
+                      &#62;
+                    </div>
+                  )}
                 </React.Fragment>
+              )}
+            {this.props.content.example &&
+              this.props.content.currentQuestion + 1 &&
+              this.props.content.questions.length &&
+              this.props.content.currentQuestion + 1 ===
+                this.props.content.questions.length && (
+                <div
+                  className="btn btn-start"
+                  onClick={() => this.props.startTest()}
+                >
+                  START !
+                </div>
+              )}
+            {!this.props.content.example &&
+              this.props.content.currentQuestion + 1 &&
+              this.props.content.questions.length &&
+              this.props.content.currentQuestion + 1 ===
+                this.props.content.questions.length && (
+                <div
+                  className="btn btn-start"
+                  onClick={() => this.props.finishAndSubmit(this.props.content)}
+                >
+                  SUBMIT !
+                </div>
               )}
           </React.Fragment>
         )}
@@ -51,7 +81,8 @@ const mapDispatchToProps = dispatch => {
   return {
     previousQuestion: content => dispatch(previousQuestion(content)),
     nextQuestion: content => dispatch(nextQuestion(content)),
-    startTest: () => dispatch(startTest())
+    startTest: () => dispatch(startTest()),
+    finishAndSubmit: content => dispatch(finishAndSubmit(content))
   }
 }
 

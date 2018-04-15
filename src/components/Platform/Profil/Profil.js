@@ -8,7 +8,7 @@ class Profil extends Component {
   state = {
     step: 'Coordonnées',
     info: {
-      gender: 'famale'
+      gender: 'female'
     },
     education: {
       degree: 'Licence'

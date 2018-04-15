@@ -4,10 +4,13 @@
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
   user-select: none;
-  padding: 20px;
+  margin: 1% 0;
+
+  padding: 2%;
 }
 
 .admission .content {
@@ -15,7 +18,8 @@
   display: flex;
   display: -ms-flexbox;
   flex-direction: column;
-  justify-content: center;
+  flex: 5;
+  justify-content: space-around;
   margin: 10px;
   max-width: 80%;
   min-height: 44vh;
@@ -30,13 +34,11 @@
   -ms-flex-direction: row;
   flex-direction: row;
   display: -ms-flexbox;
-  display: flex;
+	display: flex;
   -ms-flex-pack: center;
   justify-content: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  width: 90vw;
-  margin-top: 38px;
 }
 
 .admission .btn {
@@ -46,9 +48,9 @@
   cursor: pointer;
   font-family: ZonaProBold;
   font-size: 25px;
-  line-height: 50px;
-	margin: 2px 6px;
-	min-width: 20px;
+  line-height: 54px;
+  margin: 6px;
+  min-width: 20px;
   min-height: 50px;
   padding: 0 15px;
   text-align: center;
@@ -60,15 +62,12 @@
   border-color: #3498db;
 }
 
-.admission .btn-nav {
-  margin-top: 5px;
-}
-
 .admission .btn-start {
   background-color: rgb(254, 66, 77);
-	border: none;
+  border: none;
 	color: white;
-	min-width: 100px;
+	height: 55px;
+  min-width: 100px;
 }
 
 .admission img {
@@ -77,42 +76,43 @@
 }
 
 .admission .navigation {
+	align-items: flex-end;
   display: -ms-flexbox;
-  display: flex;
+	display: flex;
+	justify-content: flex-end;
+	width: 20%;
   -ms-flex-direction: row;
   flex-direction: row;
-  min-width: 1%;
-  justify-content: flex-end;
-  position: relative;
-  top: 0;
-  right: 0;
 }
 
 .admission .navigation .btn.btn-nav {
-  border-radius: 4px;
   color: white;
   background: #34495e;
   font-weight: normal;
-  width: 10px;
-  margin: 4px;
+	width: 60px;
+	height: 55px;
   text-align: center;
 }
 
 .pretest-header {
   display: flex;
-  width: 80%;
-  align-items: center;
+  width: 100%;
   justify-content: flex-end;
 }
 
 .progress {
   font-family: ZonaProBold;
-	font-size: 1.2em;
-	min-width: 1%;
+  font-size: 1.2em;
+  min-width: 1%;
 }
 
 .question-content {
   width: calc(100% - 100px);
+}
+
+.question-text {
+	line-height: 30px;
+	font-size: 20px;
 }
 
 .warning {
@@ -120,16 +120,28 @@
 }
 
 .test {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex: 1;
+  justify-content: space-evenly;
+  width: 100%;
 }
 .test-header {
   display: flex;
-  width: 80%;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
+}
+
+.test .test-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.test .test-footer .blank {
+	width: 20%;
 }
 
 .time {
@@ -139,5 +151,5 @@
 }
 
 .timer {
-	min-width: 1%;
+  min-width: 1%;
 }

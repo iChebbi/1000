@@ -5,13 +5,14 @@ class Choices extends Component {
   render() {
     return (
       <div className="progress">
-        {this.props.content && (
-          <span>
-            {this.props.content.currentQuestion + 1}/{
-              this.props.content.questions.length
-            }
-          </span>
-        )}
+        {this.props.content &&
+          this.props.content.questions && (
+            <span>
+              {this.props.content.currentQuestion + 1}/{
+                this.props.content.questions.length
+              }
+            </span>
+          )}
       </div>
     )
   }

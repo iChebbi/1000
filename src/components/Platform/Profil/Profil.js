@@ -16,7 +16,8 @@ class Profil extends Component {
     assos: {
       board: false,
       member: false
-    }
+    },
+    upload: ''
   }
 
   componentDidMount = async () => {
@@ -54,6 +55,32 @@ class Profil extends Component {
     } catch (error) {
       console.log(error)
       return false
+    }
+  }
+
+  handleFileUpload = async e => {
+    let formData = new FormData()
+    formData.append('degreeFile', e.target.files[0])
+    formData.append('id', window.localStorage.user_id)
+    try {
+      const response = await axios.post(
+        base_url + '/api/user/upload',
+        formData,
+        {
+          headers: { token: window.localStorage.access_token }
+        }
+      )
+
+      response.status === 200 &&
+        response.data.success &&
+        this.setState({ upload: 'Succées' })
+
+      response.status === 200 &&
+        !response.data.success &&
+        this.setState({ upload: response.data.message })
+    } catch (error) {
+      this.setState({ upload: 'Error uploading file' })
+      console.log(error)
     }
   }
 
@@ -354,13 +381,19 @@ class Profil extends Component {
             </div>
           </div>
 
-          <div className="form-group">
+          <div className="form-group file-upload">
             <label className="label-right">Copie Diplôme</label>
             <input
               name="degreeFile"
-              onChange={this.handleEduInputChange}
+              onChange={this.handleFileUpload}
               type="file"
             />
+          </div>
+          <div className="form-group file-upload">
+            <label />
+            <div className="file-upload-feedback">
+              {this.state.upload || ''}
+            </div>
           </div>
 
           <div className="form-group">

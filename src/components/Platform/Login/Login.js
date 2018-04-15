@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import {Link} from 'react-router-dom'
 import axios from 'axios'
 
 import { login } from '../../../actions/authActions'
@@ -56,8 +57,8 @@ class Login extends Component {
               type="password"
             />
             <button className="btn">Login</button>
-            <button className="btn">Register</button>
-            <p className="text-small">forgot password ?</p>
+            <Link to="/" className="btn">Register</Link>
+            {/* <p className="text-small">forgot password ?</p> */}
           </form>
         </div>
       </div>

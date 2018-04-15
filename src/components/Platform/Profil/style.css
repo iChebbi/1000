@@ -22,8 +22,8 @@
   flex: 2;
   background-color: rgb(225, 225, 225);
   border: none;
-	min-height: 22px;
-	padding-left : 10px;
+  min-height: 22px;
+  padding-left: 10px;
 }
 
 .Profile .form-group > label {
@@ -33,6 +33,17 @@
   white-space: nowrap;
 }
 
+.Profile .form-group.file-upload {
+  margin-bottom: 3px;
+}
+
+.Profile .form-group .file-upload-feedback {
+	color: grey;
+	flex: 2;
+	font-size: 10px;
+	height: 20px;
+	margin-bottom: 5px;
+}
 .Profile .label-right {
   text-align: right;
 }

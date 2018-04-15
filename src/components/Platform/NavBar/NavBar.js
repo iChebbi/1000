@@ -33,11 +33,11 @@ class NavBar extends Component {
             </div>
           )}
         {window.location.pathname === '/' && (
-					<div className="nav-user">
-          <Link className="gmc-red" to="/platform">
-            Login
-          </Link>
-					</div>
+          <div className="nav-user">
+            <Link className="gmc-red" to="/platform">
+              {window.localStorage.access_token ? 'Platforme' : 'Login'}
+            </Link>
+          </div>
         )}
       </div>
     )

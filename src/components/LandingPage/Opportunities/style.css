@@ -1,0 +1,34 @@
+.opportunities-container{
+  background-color: rgb(254, 66, 77);
+  text-align: center;
+  padding: 30px 0 30px;
+  color: white;
+}
+
+.opportunities-container h2{
+  font-size: 2.8em;
+  margin-bottom: 30px;
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+
+.opportunities-container h3{
+  font-size: 1.35em;
+  font-family: "Montserrat";
+  font-weight: 600;
+}
+
+.opportunities-container p{
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  font-family: "Montserrat";
+}
+
+@media screen and (max-width: 768px){
+  .opportunities-container h2{
+    font-size: 2.5em;
+  }
+  .content-text{
+    margin-top: -20px;
+  }
+}

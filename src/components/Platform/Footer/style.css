@@ -1,0 +1,17 @@
+.footer {
+  align-items: center;
+  background-color: #000000;
+  color: white;
+  display: flex;
+  height: 60px;
+  font-family: ZonaProBold;
+  font-size: 15px;
+	font-weight: 100;
+	user-select: none;
+	width: 100%;
+	/* position: fixed; */
+}
+
+.copyright {
+  margin-left: 10%;
+}

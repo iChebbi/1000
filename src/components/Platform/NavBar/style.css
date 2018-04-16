@@ -1,0 +1,112 @@
+.nav-user {
+  display: flex;
+  align-items: center;
+  margin-right: 10%;
+}
+
+.NavBar {
+  background-color: #000000;
+  color: white;
+  display: flex;
+  font-family: ZonaProBold;
+  font-weight: 900;
+  font-size: 20px;
+  justify-content: space-between;
+  height: 76px;
+  margin-bottom: 0 !important ;
+  width: 100%;
+}
+
+.brand-container {
+  display: flex;
+  align-items: center;
+  margin-left: 10%;
+}
+
+.NavBar .gmc-red {
+  background-color: rgb(254, 66, 77);
+}
+
+.NavBar .logo {
+  height: 30px;
+}
+
+.NavBar a,
+.NavBar a:visited,
+.NavBar a:active,
+.NavBar a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.NavBar p {
+  margin: 0 !important;
+}
+
+.NavBar button {
+  border: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  font-family: ZonaProBold;
+  font-size: 20px;
+}
+.thousand {
+  font-size: 30px;
+}
+
+.v-sep {
+  height: 30px;
+  margin: 15px;
+  border: solid 0.5px white;
+}
+
+@media screen and (max-width: 1280px) {
+  .brand-container {
+    margin-left: 5%;
+  }
+  .nav-user {
+    margin-right: 5%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .brand-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav-user {
+    display: none;
+  }
+  .logo {
+    height: 25px;
+  }
+  .thousand {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .nav-user {
+    font-size: 1.75em;
+  }
+  .logo {
+    height: 25px;
+  }
+  .thousand {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .nav-user {
+    display: none;
+  }
+  .logo {
+    height: 25px;
+  }
+  .thousand {
+    font-size: 25px;
+  }
+}

@@ -1,0 +1,66 @@
+.thousand-navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  padding: 10px 10%;
+  min-height: 76px;
+  align-items: center;
+}
+
+.logo-container {
+  display: inline;
+}
+
+.pre-logo {
+  color: white;
+  font-size: 2.35em;
+  font-family: 'Anton', sans-serif;
+  padding-left: 14px;
+  margin-left: 16px;
+  border-left: 2px solid white;
+  display: inline;
+}
+
+.thousand-navbar .logo {
+  height: 36px;
+  margin-left: 12px;
+  margin-top: -14px;
+}
+
+.post-logo {
+  background-color: rgb(254, 66, 77);
+  color: white;
+  font-size: 1.75em;
+  line-height: 1.2em;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  padding: 0 2px;
+}
+
+.post-logo a,
+.post-logo a:visited,
+.post-logo a:active,
+.post-logo a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .post-logo {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .logo {
+    max-height: 25px;
+  }
+  .pre-logo {
+    font-size: 1.75em;
+  }
+}
+@media screen and (max-width: 420px) {
+  .pre-logo {
+    display: none;
+  }
+}

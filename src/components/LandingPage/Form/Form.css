@@ -1,0 +1,213 @@
+.form-component-container {
+  display: flex;
+  background-image: url('first-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 76px);
+  padding: 100px 0;
+  position: relative;
+  color: rgb(255, 255, 255);
+  align-items: center;
+}
+
+.description-container a {
+  color: rgb(254, 66, 77);
+  text-decoration: none;
+}
+
+.description-container a:hover {
+  cursor: pointer;
+  color: rgb(254, 66, 77);
+  font-weight: bold;
+}
+
+.dark-gradiant {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65));
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65));
+}
+
+.slide-container {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: auto;
+  position: relative;
+}
+
+.description-container {
+  width: 45%;
+}
+
+.description-container h1 {
+  background-color: rgb(254, 66, 77);
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  font-weight: bold;
+  font-family: 'Montserrat', 'Roboto', sans-serif;
+  font-size: 2.8em;
+  line-height: 1em;
+  margin-bottom: 7px;
+}
+
+.description-container h4 {
+  margin-top: 0px;
+  font-weight: 600;
+  font-size: 1.25em;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.0125em;
+}
+
+.description-container p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4em;
+  margin-top: 37px;
+  text-align: justify;
+}
+
+.description-container li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3em;
+  list-style-type: none;
+}
+
+.description-container li::before {
+  content: '- ';
+}
+
+.form-container {
+  margin-left: 6px;
+  margin-top: 5px;
+  width: 50%;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 550px;
+}
+
+.form-container h4 {
+  color: #d8d7d7;
+  font-size: 15px;
+}
+
+.form-component-container .form-container input {
+  box-shadow: none;
+  border: none;
+  outline: none;
+  height: 32px;
+  width: 240px;
+  padding: 3px 7px;
+}
+
+.form-component-container .form-container input[type='text'],
+.form-component-container .form-container input[type='email'],
+.form-component-container .form-container input[type='number'] {
+  background-color: lightGrey;
+  color: black;
+  box-shadow: inset 2px 2px 5px #888;
+}
+
+.form-component-container input[type='number']::-webkit-outer-spin-button,
+.form-component-container input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.submit-btn-container {
+  width: 100%;
+}
+
+.submit-button {
+  max-height: 32px;
+  max-width: 120px;
+  margin-top: 14px;
+  background-color: rgb(254, 66, 77);
+  border: none;
+  box-shadow: 2px 2px 4px #111 !important;
+  -webkit-box-shadow: 2px 2px 4px #111 !important;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  padding: 2px 2px;
+  font-size: 1.2em;
+  letter-spacing: 0.0125em;
+}
+
+.input-line {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1050px) {
+  .form-container {
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .input-container {
+    margin-left: 7px;
+  }
+
+  .submit-button {
+    margin-left: 0px !important;
+  }
+
+  .form-component-container {
+    height: auto;
+  }
+
+  .slide-container {
+    flex-direction: column;
+  }
+
+  .description-container {
+    width: 100%;
+  }
+
+  .form-container {
+    width: 100%;
+    margin-top: 35px;
+  }
+
+  .input-container {
+    flex-direction: column;
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .input-container {
+    flex-direction: column;
+    margin-left: 0px;
+  }
+
+  .form-container {
+    width: 100%;
+    /* text-emphasis: start; */
+  }
+
+  .description-container {
+    width: 100%;
+    text-align: start;
+  }
+  .description-container h1 {
+    font-size: 2.5em;
+  }
+  .input-container h4 {
+    margin-left: 0px;
+  }
+  .input-container input {
+    margin-left: 0px;
+  }
+  .form-container .submit-button {
+    margin-left: 0px;
+  }
+}

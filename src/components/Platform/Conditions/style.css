@@ -1,0 +1,53 @@
+.Conditions {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 22px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: rgba(224, 224, 225, 0.4);
+  padding: 2%;
+	margin: 1% 0;
+}
+
+.Conditions .navigation {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1%;
+}
+
+.Conditions .btn-next {
+  border: none;
+  background-color: rgb(254, 66, 77);
+	color: white;
+	cursor: pointer;
+	font-family: ZonaProBold;
+	font-size: 20px;
+	height: 40px;
+	margin: 0 10px;
+  width: 100px;
+}
+
+.Conditions .header {
+  font-family: ZonaProBold;
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0 0;
+}
+
+.Conditions .step {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Conditions .step .step-title {
+  font-weight: bolder;
+  font-family: ZonaProBold;
+  color: rgb(254, 66, 77);
+  white-space: nowrap;
+  font-style: italic;
+}
+.Conditions .step .step-content {
+  margin-left: 1%;
+}

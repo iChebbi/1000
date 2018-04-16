@@ -1,0 +1,15 @@
+.thousands-footer{
+  background-color: black;
+  padding: 8px;
+  text-align: center;
+  color: white;
+  font-family: "Roboto";
+  letter-spacing: 0.0125em;
+  font-size: 1.2em;
+}
+
+@media screen and (max-width: 420px){
+  .thousands-footer{
+    font-size: 0.8em;
+  }
+}

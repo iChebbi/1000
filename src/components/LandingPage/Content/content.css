@@ -78,4 +78,7 @@
       height: auto;
       text-align: center;
     }
+    .content-text li{
+      text-align: left;
+    }  
 }

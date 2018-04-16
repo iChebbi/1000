@@ -2,12 +2,13 @@
   background-color: rgb(254, 66, 77);
   color: white;
   text-align: center;
-  padding: 15px 0 40px;
+  padding: 20px 0 40px;
 }
 
 .wheretobegin-container h2{
-  background-color: rgb(254, 66, 77);
-  color: white;
+  background-color: white;
+
+  color: rgb(254, 66, 77);;
   display: inline-block;
   font-size: 2.8em;
   margin-bottom: 35px;
@@ -17,14 +18,21 @@
 
 .wheretobegin-container .steps{
   margin: 15px auto;
-  width: 80%;
-  max-width: 80%;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .steps .step{
   text-align: center;
-  width: 70%;
+  width: 27%;
   margin: 12px auto;
+}
+
+.mt10 {
+  text-align: justify;
+
 }
 
 .wheretobegin-container .number{
@@ -40,13 +48,15 @@
 }
 
 .wheretobegin-container h3{
-  font-size: 1.35em;
+  font-size: 1.5em;
   font-family: "Montserrat";
   font-weight: 600;
+  margin-bottom: 25px;
+  margin-top: 27px;
 }
 
 .wheretobegin-container p{
-  font-size: 1.2em;
+  font-size: 1.51em;
   margin-bottom: 30px;
   font-family: "Montserrat";
 }
@@ -67,4 +77,13 @@
   .wheretobegin-container h2{
     font-size: 2.5em;
   }
+
+  .wheretobegin-container .steps{
+    flex-direction: column;
+  }
+
+  .steps .step{
+    width: 60%;
+  }
+
 }

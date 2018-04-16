@@ -15,7 +15,6 @@ class Login extends Component {
         email: this.state.email,
         password: this.state.password
       })
-			console.log(response.data)
 			
       window.localStorage.access_token = response.data.token
       window.localStorage.user_id = response.data.id

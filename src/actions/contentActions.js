@@ -54,7 +54,6 @@ export const finishAndSubmit = content => {
           headers: { token: window.localStorage.access_token }
         }
       )
-      console.log(response.data)
       dispatch({ type: 'FINISH', payload: response.data })
     } catch (error) {
       console.log(error)

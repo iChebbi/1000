@@ -26,7 +26,6 @@ class Form extends React.Component {
         firstName: this.state.firstName,
         lastName: this.state.lastName
       })
-      console.log(response)
 
       window.localStorage.access_token = response.data.token
       window.localStorage.user_id = response.data.id

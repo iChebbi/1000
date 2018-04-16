@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {base_url} from '../../../assets/env'
 import './content.css'
 
 class Content extends Component {
@@ -20,13 +21,13 @@ class Content extends Component {
           </p>
           <ul>
             <li>
-             Javascript: <a link='#' target='_blank'>Télécharger le programme.</a>
+             Javascript: <a href={`${base_url}/static/javascript.pdf`} target='_blank'>Télécharger le programme.</a>
             </li>
             <li>
-             Java: <a link='#' target='_blank'>Télécharger le programme.</a>
+             Java: <a href={`${base_url}/static/java.pdf`} target='_blank'>Télécharger le programme.</a>
             </li>
             <li>
-             PHP: <a link='#' target='_blank'>Télécharger le programme.</a>
+             PHP: <a href={`${base_url}/static/javascript.pdf`} target='_blank'>Télécharger le programme.</a>
             </li>
           </ul>
           <p>

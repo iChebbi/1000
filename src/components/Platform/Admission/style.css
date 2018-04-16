@@ -34,7 +34,7 @@
   -ms-flex-direction: row;
   flex-direction: row;
   display: -ms-flexbox;
-	display: flex;
+  display: flex;
   -ms-flex-pack: center;
   justify-content: center;
   -ms-flex-wrap: wrap;
@@ -65,8 +65,8 @@
 .admission .btn-start {
   background-color: rgb(254, 66, 77);
   border: none;
-	color: white;
-	height: 55px;
+  color: white;
+  height: 55px;
   min-width: 100px;
 }
 
@@ -76,11 +76,11 @@
 }
 
 .admission .navigation {
-	align-items: flex-end;
+  align-items: flex-end;
   display: -ms-flexbox;
-	display: flex;
-	justify-content: flex-end;
-	width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  width: 20%;
   -ms-flex-direction: row;
   flex-direction: row;
 }
@@ -89,8 +89,8 @@
   color: white;
   background: #34495e;
   font-weight: normal;
-	width: 60px;
-	height: 55px;
+  width: 60px;
+  height: 55px;
   text-align: center;
 }
 
@@ -111,8 +111,8 @@
 }
 
 .question-text {
-	line-height: 30px;
-	font-size: 20px;
+  line-height: 30px;
+  font-size: 20px;
 }
 
 .warning {
@@ -141,7 +141,7 @@
 }
 
 .test .test-footer .blank {
-	width: 20%;
+  width: 20%;
 }
 
 .time {
@@ -152,4 +152,33 @@
 
 .timer {
   min-width: 1%;
+}
+
+@media screen and (max-width: 768px) {
+  .admission .blank {
+    display: none;
+  }
+  .admission .btn {
+    font-size: 16px;
+  }
+  .admission .navigation {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  .admission .choices .btn {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+  .admission .navigation .btn.btn-nav {
+    font-size: 30px;
+    width: 25%;
+  }
+  .admission .btn-start {
+    font-size: 30px;
+    width: 25%;
+  }
+  .test .test-footer {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }

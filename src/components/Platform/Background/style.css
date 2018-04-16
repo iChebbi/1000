@@ -104,3 +104,12 @@
   margin: 0 10px;
   width: 100px;
 }
+
+@media screen and (max-width: 768px){
+	.Background .double-form-container {
+		width: 100%;
+	}
+	.Background .form-group {
+		flex-direction: column;
+	}
+}

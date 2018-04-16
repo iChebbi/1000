@@ -3,7 +3,8 @@
   display: flex;
   flex: 1;
   flex-wrap: wrap;
-  width: 90%;
+	padding: 1%;
+	width: 90%
 }
 
 .Profile .form-container {
@@ -12,7 +13,8 @@
 }
 
 .Profile .form-group {
-  display: flex;
+	display: flex;
+	align-items: center;
   width: 100%;
   margin-bottom: 25px;
 }
@@ -22,7 +24,7 @@
   flex: 2;
   background-color: rgb(225, 225, 225);
   border: none;
-  min-height: 22px;
+  height: 22px;
   padding-left: 10px;
 }
 
@@ -41,8 +43,8 @@
 	color: grey;
 	flex: 2;
 	font-size: 10px;
-	height: 20px;
-	margin-bottom: 5px;
+	line-height: 10px;
+	margin-bottom: 0.25%;
 }
 .Profile .label-right {
   text-align: right;
@@ -88,7 +90,7 @@
   font-size: 18px;
   flex: 1;
   margin: 0 1px;
-  max-height: 30px;
+  height: 22px;
 }
 
 .Profile .toggle-active {
@@ -124,4 +126,25 @@
 .Profile input[type='date']::-webkit-outer-spin-button,
 .Profile input[type='date']::-webkit-inner-spin-button {
   -webkit-appearance: none;
+}
+
+.Profile input[type='file'] {
+	width: 100%;
+}
+@media screen and (max-width: 1024px){
+	.Profile .double-form-container {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 768px){
+	
+	.Profile .form-group > label {
+		font-size: 13px;
+		line-height: 18px;
+		white-space: normal;
+	}
+	.Profile .toggle {
+		font-size: 14px;
+	}
 }

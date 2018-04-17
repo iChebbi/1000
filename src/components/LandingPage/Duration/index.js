@@ -32,7 +32,7 @@ class Duration extends React.Component {
               </ul>
             </div>
             <div className='duration-img col-xs-12 col-sm-12 col-md-6'>
-              <img alt=""  src='duration.png' />
+              <img alt=""  src='duration-modified.png' />
             </div>
           </div>
 

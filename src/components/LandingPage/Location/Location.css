@@ -65,7 +65,9 @@
 .location-text-container h2{
     margin-top: 5px;
 }
-
+.hebergement{
+    font-size: 0.9em;
+}
 @media screen and (max-width: 1150px) {
     .locations {
         flex-direction: column;

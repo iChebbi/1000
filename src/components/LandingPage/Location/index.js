@@ -8,7 +8,8 @@ class Location extends React.Component {
         <div className='location-text-container'>
           <h2>Ou se passent les sessions ?</h2>
           <p className='location-text-descripttion'>
-            Les sessions se passent dans les Hackerspaces de GoMyCode dans les villes suivantes:
+          Les sessions se passent dans les Hackerspaces de GoMyCode dans les villes ci-dessous. <br/>
+            <span className="hebergement">L'hébergement est possible dans la limite des places disponibles.</span>
           </p>
         </div>
         <div className='locations'>
